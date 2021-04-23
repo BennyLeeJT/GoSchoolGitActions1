@@ -17,6 +17,10 @@ jobs:
           go-version: '1.15'
           
       - name: Go version Check
-        run:
+        run: |
           go version
           
+      - name: Install dependencies
+        run: |
+          go get github.com/tebeka/go2xunit
+          go get github.com/franela/goblin
